@@ -1,0 +1,18 @@
+
+# PneumoLens - Core Dependencies
+
+numpy==2.5.2
+pandas==3.0.5
+Pillow==12.3.0
+opencv-python==4.14.0.94
+matplotlib==3.11.1
+scikit-learn==1.9.1
+PyYAML==6.0.3
+tqdm==4.70.1
+
+# PyTorch is installed separately:
+# Local CPU:
+# python -m pip install torch==2.13.0 torchvision==0.28.0 --index-url https://download.pytorch.org/whl/cpu
+
+# Kaggle GPU:
+# Use the compatible preinstalled PyTorch environment.
