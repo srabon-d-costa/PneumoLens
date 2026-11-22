@@ -1,0 +1,4 @@
+original_split,native_mode,images
+test,L,624
+train,L,4949
+train,RGB,283

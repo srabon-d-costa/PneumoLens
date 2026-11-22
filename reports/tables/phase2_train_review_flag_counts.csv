@@ -1,0 +1,7 @@
+review_flag,train_images,percent_of_decoded_train
+extreme_aspect,56,1.07
+low_thumbnail_contrast,6,0.11
+very_dark_thumbnail,0,0.0
+very_bright_thumbnail,1,0.02
+high_dark_fraction,0,0.0
+high_bright_fraction,0,0.0

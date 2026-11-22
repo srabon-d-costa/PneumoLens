@@ -1,0 +1,82 @@
+{
+  "project": "PneumoLens",
+  "github_phase": "Phase 2 - EDA",
+  "notebook": "02_EDA.ipynb",
+  "executed_at_utc": "2026-11-22T06:24:51.332541+00:00",
+  "selected_input": "/kaggle/input/datasets/srabondcosta/pneumonia/ZhangLabData/CellData/chest_xray",
+  "input_kind": "directory",
+  "zip_subfolder": "",
+  "analysis_scope": "train-only pixel statistics and image galleries; test file counts and headers only",
+  "observed_image_count": 5856,
+  "original_splits": {
+    "train": 5232,
+    "val": 0,
+    "test": 624
+  },
+  "train_label_counts": {
+    "NORMAL": 1349,
+    "PNEUMONIA": 3883
+  },
+  "train_pneumonia_to_normal_ratio": 2.8784,
+  "train_expected_pixel_images": 5232,
+  "train_decoded_pixel_images": 5232,
+  "train_pixel_error_count": 0,
+  "source_header_error_count": 0,
+  "unknown_folder_label_or_split_count": 0,
+  "folder_filename_conflict_count": 0,
+  "phase1_reference_mismatches": [],
+  "train_mean_of_thumbnail_means_8bit": 123.04994385704309,
+  "train_mean_of_thumbnail_stds_8bit": 56.52284824847382,
+  "thumbnail_longest_side": 256,
+  "train_heuristic_review_flag_counts": {
+    "extreme_aspect": 56,
+    "low_thumbnail_contrast": 6,
+    "very_dark_thumbnail": 0,
+    "very_bright_thumbnail": 1,
+    "high_dark_fraction": 0,
+    "high_bright_fraction": 0
+  },
+  "sampled_training_gallery_images": 8,
+  "seed": 2026,
+  "image_mode_counts_all": {
+    "L": 5573,
+    "RGB": 283
+  },
+  "completion_checks": {
+    "one_chest_xray_dataset_selected": true,
+    "at_least_one_train_normal_and_pneumonia": true,
+    "all_source_images_have_recognized_split_and_class": true,
+    "no_conflicting_filename_class_tags": true,
+    "all_source_image_headers_readable": true,
+    "all_original_train_headers_readable": true,
+    "all_original_train_pixels_profiled": true,
+    "test_pixels_not_used_for_eda": true
+  },
+  "eda_completion_gate": "PASS_FOR_PHASE3_PREPROCESSING_PLANNING",
+  "training_split_approved": false,
+  "preprocessing_proposal_NOT_FINAL": {
+    "target_input_size": [
+      224,
+      224
+    ],
+    "aspect_handling": "Preserve aspect ratio; resize/letterbox rather than stretch or aggressive crop",
+    "source_channels": "Deterministically convert to grayscale then replicate to RGB for ImageNet-pretrained backbones",
+    "normalization": "Choose per-backbone normalization in Phase 3; EDA statistics are not model-transform moments",
+    "augmentation": "Mild train-only rotation/translation/brightness/contrast; avoid vertical flips and aggressive crops",
+    "imbalance": "Compute loss weights or a weighted sampler from the approved training subset only",
+    "split_policy": "Original test locked; do not construct val from unverified numeric filename groups"
+  },
+  "warnings": [
+    "No existing validation partition; Phase 2 DOES NOT create one",
+    "Patient-level independence remains unverified; filename numeric tokens are NOT verified patient IDs",
+    "Phase 1 flagged exact duplicates and many dHash candidates; review them before approving training splits",
+    "No external validation or clinical reliability can be claimed from this single dataset"
+  ],
+  "libraries": {
+    "python": "3.13.18",
+    "pandas": "2.3.3",
+    "numpy": "2.1.3",
+    "pillow": "13.0.0",
+    "matplotlib": "3.10.0"
+  }
+}

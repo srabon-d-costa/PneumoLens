@@ -1,0 +1,5 @@
+original_split,filename_subtype_token,images
+test,BACTERIAL,242
+test,VIRAL,148
+train,BACTERIAL,2538
+train,VIRAL,1345

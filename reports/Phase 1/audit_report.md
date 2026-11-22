@@ -1,4 +1,4 @@
-# PneumoLens | Phase 2 Data Audit V2
+# PneumoLens | Phase 1 Data Audit V2
 
 UTC date: 2026-11-22T05:45:40.340990+00:00
 Dataset source: `/kaggle/input/datasets` (directory)
