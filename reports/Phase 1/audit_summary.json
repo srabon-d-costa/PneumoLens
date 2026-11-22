@@ -1,0 +1,56 @@
+{
+  "project": "PneumoLens",
+  "phase": "Phase 2",
+  "notebook": "01_Dataset_Audit_V2",
+  "audit_utc": "2026-11-22T05:45:40.340990+00:00",
+  "selected_source": "/kaggle/input/datasets",
+  "source_type": "directory",
+  "inventory_all_images": 115165,
+  "cxr_image_candidates": 5856,
+  "excluded_other_or_uncertain_images": 109309,
+  "class_counts": {
+    "PNEUMONIA": 4273,
+    "NORMAL": 1583
+  },
+  "original_split_counts": {
+    "train": 5232,
+    "test": 624
+  },
+  "subtype_filename_token_counts": {
+    "BACTERIAL": 2780,
+    "VIRAL": 1493
+  },
+  "label_folder_filename_disagreements": 0,
+  "fallback_modality_rows": 0,
+  "full_decode_enabled": true,
+  "confirmed_full_decodes": 5856,
+  "image_decode_errors": 0,
+  "sha256_enabled": true,
+  "sha256_errors": 0,
+  "exact_duplicate_groups": 27,
+  "exact_duplicate_image_rows": 56,
+  "redundant_copies_within_duplicate_groups": 29,
+  "exact_duplicate_groups_cross_original_splits": 0,
+  "unverified_numeric_token_groups": 3081,
+  "unverified_numeric_tokens_cross_splits": 0,
+  "unverified_numeric_tokens_mixed_subtypes": 809,
+  "verified_patient_coverage": 0,
+  "verified_patients_cross_original_splits": null,
+  "near_duplicate_screen_status": "COMPLETED",
+  "near_duplicate_hamming_threshold": 4,
+  "near_duplicate_candidate_pairs": 214758,
+  "near_duplicate_comparisons_completed": 3264768,
+  "validation_manifest_status": "NOT_REQUESTED",
+  "ready_for_eda": true,
+  "ready_for_training_split_review": false,
+  "full_audit_checks_completed": true,
+  "warnings": [
+    "No approved validation split; original test must remain untouched",
+    "Patient-level independence is NOT verified: trusted patient ID mapping incomplete",
+    "Exact duplicates within source: 56 image rows in 27 groups",
+    "Mixed bacterial/viral filename tokens in 809 UNVERIFIED numeric groups",
+    "Cross-split dHash candidate pairs requiring manual review: 214758",
+    "No verified patient-grouped validation split was requested"
+  ],
+  "limitation": "Image-file analysis only; no proof of patient independence or clinical validity without trusted metadata/external validation."
+}
