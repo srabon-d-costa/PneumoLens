@@ -1,0 +1,132 @@
+{
+  "project": "PneumoLens",
+  "github_phase": "Phase 3 - Preprocessing",
+  "executed_at_utc": "2026-11-22T06:56:11.277513+00:00",
+  "input_source": "/kaggle/input/datasets/srabondcosta/pneumonia/ZhangLabData/CellData/chest_xray",
+  "input_type": "folder",
+  "input_zip_prefix": "",
+  "expected_original_source_counts": {
+    "train/NORMAL": 1349,
+    "train/PNEUMONIA": 3883,
+    "test/NORMAL": 234,
+    "test/PNEUMONIA": 390
+  },
+  "observed_original_source_counts": {
+    "test/NORMAL": 234,
+    "test/PNEUMONIA": 390,
+    "train/NORMAL": 1349,
+    "train/PNEUMONIA": 3883
+  },
+  "original_train_images_checked": 5232,
+  "original_train_images_succeeded": 5232,
+  "original_train_images_failed": 0,
+  "original_test_pixels_read_for_preprocessing": 0,
+  "preprocessing_version": "pneumolens-preprocess-v1",
+  "config": {
+    "version": "pneumolens-preprocess-v1",
+    "task": "binary_normal_pneumonia",
+    "class_to_index": {
+      "NORMAL": 0,
+      "PNEUMONIA": 1
+    },
+    "image_size": 224,
+    "convert_mode": "L_then_RGB_replication",
+    "resize_interpolation": "bilinear",
+    "pad_value": 0,
+    "normalization": {
+      "policy": "imagenet1k_pretrained_fixed",
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ],
+      "reason": "Fixed ImageNet-1K normalization for ImageNet-pretrained DenseNet121. Not computed on X-ray data."
+    },
+    "augmentation": {
+      "max_degrees": 5.0,
+      "max_translate_fraction": 0.02,
+      "max_brightness_delta": 0.05,
+      "max_contrast_delta": 0.05,
+      "horizontal_flip": false,
+      "vertical_flip": false,
+      "random_crop": false
+    },
+    "preprocessing_note": "Grayscale luminance conversion then three identical pre-normalization channels; bilinear resizing with centered zero padding. No CLAHE, crop, flip, or histogram equalization.",
+    "reference_seed": 2026
+  },
+  "source_sha256": "017bc7e5a6a05673dd22d4f8c1091dd5bef57d87d25801f4e75447bd68be93c4",
+  "config_sha256": "2c3b3f325cbcfeecdc28672222bb703e56bd86c5b8d016aa7244b1836b08ed95",
+  "train_class_wise_statistics": [
+    {
+      "label": "NORMAL",
+      "images": 1349,
+      "native_width_median": 1638.0,
+      "native_height_median": 1325.0,
+      "pad_fraction_mean": 0.17959,
+      "pad_fraction_median": 0.18304,
+      "pad_fraction_p95": 0.3125,
+      "high_padding_count": 0,
+      "extreme_aspect_count": 0,
+      "low_transformed_contrast_count": 0,
+      "mean_8bit_after_letterbox": 100.60849,
+      "mean_normalized_channel0": -0.39501,
+      "mean_normalized_channel0_std": 1.22773
+    },
+    {
+      "label": "PNEUMONIA",
+      "images": 3883,
+      "native_width_median": 1168.0,
+      "native_height_median": 776.0,
+      "pad_fraction_mean": 0.32343,
+      "pad_fraction_median": 0.32589,
+      "pad_fraction_p95": 0.47768,
+      "high_padding_count": 116,
+      "extreme_aspect_count": 56,
+      "low_transformed_contrast_count": 0,
+      "mean_8bit_after_letterbox": 83.63751,
+      "mean_normalized_channel0": -0.68563,
+      "mean_normalized_channel0_std": 1.23972
+    }
+  ],
+  "manual_review_candidates_count": 116,
+  "class_mean_padding_fraction_absolute_difference": 0.14383503826679392,
+  "completion_checks": {
+    "source_counts_match_phase2_reference": true,
+    "all_source_labels_known": true,
+    "both_original_train_classes_present": true,
+    "no_new_validation_split_created": true,
+    "all_original_train_images_transformed": true,
+    "source_modes_are_expected_L_or_RGB": true,
+    "all_tensor_outputs_finite": true,
+    "unit_tests_passed": true,
+    "fixture_numerical_parity": true,
+    "evaluation_repeatability": true,
+    "rgb_conversion_parity": true,
+    "train_only_gallery_created": true,
+    "aggregate_figures_created": true,
+    "source_code_and_config_exported": true
+  },
+  "preprocessing_gate": "PASS_FOR_SPLIT_REVIEW_AND_NEXT_PHASE_PREPARATION",
+  "training_gate": "BLOCKED_PENDING_PATIENT_DUPLICATE_AND_VALIDATION_SPLIT_REVIEW",
+  "warnings": [
+    "Source numeric filename tokens are NOT verified patient IDs; train/validation grouping remains unresolved.",
+    "Prior exact duplicates and cross-split perceptual similarity candidates require a documented review.",
+    "No validation partition is created in this notebook; original test is locked.",
+    "Padding, encoding and size can correlate with class; monitor shortcut learning during modeling.",
+    "Fixed ImageNet-1K statistics assume ImageNet-pretrained 3-channel DenseNet121; reconsider for a scratch-trained architecture.",
+    "Preprocessing output is not a clinical model and has not been externally validated."
+  ],
+  "library_versions": {
+    "python": "3.13.16",
+    "torch": "2.11.0+cu130",
+    "pillow": "13.0.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.0"
+  }
+}

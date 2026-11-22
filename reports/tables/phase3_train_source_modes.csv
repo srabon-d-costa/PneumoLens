@@ -1,0 +1,4 @@
+label,native_mode,source_images
+NORMAL,L,1349
+PNEUMONIA,L,3600
+PNEUMONIA,RGB,283

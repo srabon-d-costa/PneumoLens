@@ -1,0 +1,5 @@
+flag,train_images
+high_padding_review_flag,116
+extreme_aspect_review_flag,56
+low_transformed_contrast_review_flag,0
+review_candidate,116

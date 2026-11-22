@@ -1,0 +1,16 @@
+
+test_aspect_ratio_and_center_padding (test_preprocessing.TestPreprocessing.test_aspect_ratio_and_center_padding) ... ok
+test_config_contract_and_mapping (test_preprocessing.TestPreprocessing.test_config_contract_and_mapping) ... ok
+test_eval_determinism_and_pil_bytes_path_equivalence (test_preprocessing.TestPreprocessing.test_eval_determinism_and_pil_bytes_path_equivalence) ... ok
+test_eval_never_applies_augmentation (test_preprocessing.TestPreprocessing.test_eval_never_applies_augmentation) ... ok
+test_grayscale_rgb_replication_before_normalization (test_preprocessing.TestPreprocessing.test_grayscale_rgb_replication_before_normalization) ... ok
+test_mode_boundaries (test_preprocessing.TestPreprocessing.test_mode_boundaries) ... ok
+test_positive_weight_uses_only_supplied_subset (test_preprocessing.TestPreprocessing.test_positive_weight_uses_only_supplied_subset) ... ok
+test_reference_tensor_numerical_parity (test_preprocessing.TestPreprocessing.test_reference_tensor_numerical_parity) ... ok
+test_shape_dtype_and_range (test_preprocessing.TestPreprocessing.test_shape_dtype_and_range) ... ok
+test_training_is_stochastic_but_seed_reproducible (test_preprocessing.TestPreprocessing.test_training_is_stochastic_but_seed_reproducible) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.134s
+
+OK
