@@ -1,0 +1,16 @@
+{
+  "project": "PneumoLens",
+  "phase": "Phase 4 V2",
+  "record_created_utc": "2026-11-23T17:46:09.097838+00:00",
+  "dataset_fingerprint": "a7b36506fbccf5f77b5d80a73b7a53cca8515dba45ae959a8d0a62e5f219a87b",
+  "split_fingerprint": "6185405f23d72cecf4dfe63f7ba8002db97a79a39be21f5c3a6ef3d24f4f7a6b",
+  "technical_gate": "PASS_AUTOMATED_CHECKS_WITH_LIMITATIONS",
+  "human_review_status": "PENDING",
+  "training_approval": "HOLD_PENDING_HUMAN_REVIEW_AND_RISK_ACCEPTANCE",
+  "patient_independence": "UNVERIFIED",
+  "cross_original_candidates": 312,
+  "cross_train_validation_candidates": 487,
+  "automated_priority_flags": 0,
+  "manual_review_worksheet_rows": 799,
+  "research_only": true
+}

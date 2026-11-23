@@ -1,0 +1,149 @@
+{
+  "project": "PneumoLens",
+  "phase": "Phase 4 V2 - leakage-aware split integrity",
+  "run_utc": "2026-11-23T17:34:46.479512+00:00",
+  "policy_version": "pneumolens-split-v2",
+  "source_mode": "FULL_SOURCE_RESCAN",
+  "source_path": "/kaggle/input/datasets/srabondcosta/pneumonia/ZhangLabData/CellData/chest_xray",
+  "source_fingerprint": "a7b36506fbccf5f77b5d80a73b7a53cca8515dba45ae959a8d0a62e5f219a87b",
+  "source_counts": {
+    "test/NORMAL": 234,
+    "test/PNEUMONIA": 390,
+    "train/NORMAL": 1349,
+    "train/PNEUMONIA": 3883
+  },
+  "previous_v1_split_fingerprint": null,
+  "v1_to_v2_split_role_changes": null,
+  "policy_sha256": "95f78a7405b2ac6e4854b8586683425d66b2ce24e17c26f4b6932b95e05dc9c7",
+  "module_sha256": "29123b972027fa98f0b92ec9d701635b94d68aa1782fd65d2d76ea122b9d18fc",
+  "split_fingerprint": "6185405f23d72cecf4dfe63f7ba8002db97a79a39be21f5c3a6ef3d24f4f7a6b",
+  "source_rescan_note": "All original source files were freshly hashed in this run.",
+  "original_test_untouched_for_selection": true,
+  "split": {
+    "selected_seed": 2026,
+    "selected_fold": 1,
+    "selected_score": 0.0013172592558219065,
+    "tested_splits": 15,
+    "source_count": 5856,
+    "source_train_count": 5232,
+    "source_test_count": 624,
+    "dedup_removed_from_original_train": 26,
+    "locked_test_redundant_exact_copies_preserved": 3,
+    "role_counts": {
+      "TRAIN": 4166,
+      "VALIDATION": 1040,
+      "TEST_LOCKED": 624,
+      "EXCLUDED_EXACT_COPY": 26
+    },
+    "validation_fraction_of_retained_train": 0.19976949673453706,
+    "class_counts": {
+      "TRAIN/NORMAL": 1079,
+      "TRAIN/PNEUMONIA": 3087,
+      "VALIDATION/NORMAL": 269,
+      "VALIDATION/PNEUMONIA": 771
+    },
+    "class_weights_train_only": {
+      "NORMAL": 1.9304911955514366,
+      "PNEUMONIA": 0.6747651441528992
+    },
+    "qa": {
+      "all_rows_accounted_for": true,
+      "original_test_exactly_preserved": true,
+      "train_validation_groups_disjoint": true,
+      "train_test_heuristic_groups_disjoint": true,
+      "validation_test_heuristic_groups_disjoint": true,
+      "train_validation_pixel_sha_disjoint": true,
+      "train_test_pixel_sha_disjoint": true,
+      "validation_test_pixel_sha_disjoint": true,
+      "no_pixel_sha_label_conflicts": true,
+      "no_file_sha_label_conflicts": true,
+      "no_heuristic_series_cross_original_test": true,
+      "all_original_train_accounted_for": true,
+      "both_fit_classes_present": true,
+      "both_validation_classes_present": true,
+      "validation_fraction_within_declared_tolerance": true,
+      "validation_class_rate_within_declared_tolerance": true,
+      "no_high_priority_cross_original_source": true,
+      "no_high_priority_cross_train_val": true,
+      "pending_cross_partition_review_pairs": 0,
+      "no_actionable_cross_original_source": true,
+      "no_actionable_cross_final_roles": true,
+      "complete_pHash_screen_and_image_scoring": true,
+      "prior_source_fingerprint_matches": true,
+      "repeatable_split_assignment": true,
+      "no_exact_original_train_test_overlap": true,
+      "no_known_exact_label_conflicts": true,
+      "no_actionable_cross_candidate_partitions": true
+    },
+    "duplicate_diagnostics": {
+      "file_sha256_cross_original_split_groups": 0,
+      "file_sha256_conflicting_label_groups": 0,
+      "file_sha256_duplicate_groups": 27,
+      "decoded_sha256_cross_original_split_groups": 0,
+      "decoded_sha256_conflicting_label_groups": 0,
+      "decoded_sha256_duplicate_groups": 27
+    },
+    "series_groups_cross_original_split": 0,
+    "verified_patient_id_count": 0,
+    "patient_independence_verified": false
+  },
+  "similarity_screen": {
+    "total_image_pairs_compared": 17143440,
+    "phash_candidates": 1987,
+    "phash_distance_threshold": 6,
+    "complete_exhaustive_phash_search": true,
+    "screen_incomplete_due_to_resource_budget": false,
+    "method": "All-pairs vectorized 64-bit pHash Hamming distance; no LSH cap",
+    "limitation": "pHash radius does not guarantee detection of every visually similar radiograph or shared patient",
+    "phash_screened_pairs": 1987,
+    "all_phash_candidates_image_scored": true,
+    "unique_candidate_images_validated_against_saved_sha256": 1315,
+    "review_queue_pairs": 0,
+    "high_priority_pairs": 0,
+    "priority_counts": {
+      "LOW_SCREENED": 1956,
+      "EXACT_KNOWN": 31
+    },
+    "source_mode": "FULL_SOURCE_RESCAN"
+  },
+  "candidate_cross_original_train_test": 312,
+  "candidate_cross_train_validation": 487,
+  "actionable_cross_original_train_test": 0,
+  "actionable_cross_final_evaluable_roles": 0,
+  "automated_gate": {
+    "technical_split_gate": "PASS_AUTOMATED_CHECKS_WITH_LIMITATIONS",
+    "research_training_gate": "HOLD_PENDING_HUMAN_REVIEW_AND_RISK_ACCEPTANCE",
+    "patient_independence": "UNVERIFIED",
+    "clinical_validation": "NOT_SUPPORTED",
+    "why": [
+      "Filename series keys are not trusted patient identifiers",
+      "Any HIGH/REVIEW candidates need human adjudication; a negative pHash screen does not establish patient independence",
+      "Original test is locked for model selection and threshold tuning"
+    ],
+    "preregistered_thresholds": {
+      "method": "Exhaustive 64bit pHash Hamming screening, then actual 96px image-structure comparison",
+      "max_phash_distance": 6,
+      "chunk_size": 128,
+      "strong_phash_max": 3,
+      "strong_corr_min": 0.995,
+      "strong_gradient_min": 0.975,
+      "strong_mae_max": 0.045,
+      "strong_aspect_max": 0.05,
+      "review_corr_min": 0.975,
+      "review_gradient_min": 0.93,
+      "review_aspect_max": 0.1,
+      "max_private_contact_pairs": 12,
+      "note": "All 0..6 pHash candidates will be compared; HIGH/REVIEW are not confirmed duplicates."
+    }
+  },
+  "patient_independence_verified": false,
+  "model_training_automatically_authorized": false,
+  "research_only": true,
+  "runtime": {
+    "python": "3.13.16",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "pillow": "13.0.0",
+    "scikit_learn": "1.6.1"
+  }
+}

@@ -1,0 +1,27 @@
+
+test_complete_search_many_identical_hashes_no_truncation (test_split_integrity.TestCompletePerceptualScreen.test_complete_search_many_identical_hashes_no_truncation) ... ok
+test_matches_independent_bruteforce (test_split_integrity.TestCompletePerceptualScreen.test_matches_independent_bruteforce) ... ok
+test_no_auto_signoff_even_full_screen (test_split_integrity.TestCompletePerceptualScreen.test_no_auto_signoff_even_full_screen) ... ok
+test_review_queue_keeps_high_and_review_only (test_split_integrity.TestCompletePerceptualScreen.test_review_queue_keeps_high_and_review_only) ... ok
+test_source_image_hash_mismatch_blocks_resume (test_split_integrity.TestCompletePerceptualScreen.test_source_image_hash_mismatch_blocks_resume) ... 
+Checking only pHash candidate X-rays:   0%|          | 0/1 [00:00<?, ?image/s]
+Checking only pHash candidate X-rays:   0%|          | 0/1 [00:00<?, ?image/s]
+ok
+test_candidate_split_reproducible (test_split_integrity.TestSplitIntegrity.test_candidate_split_reproducible) ... ok
+test_conflicting_label_detected (test_split_integrity.TestSplitIntegrity.test_conflicting_label_detected) ... ok
+test_dct_phash_repeatable (test_split_integrity.TestSplitIntegrity.test_dct_phash_repeatable) ... ok
+test_disjoint_set (test_split_integrity.TestSplitIntegrity.test_disjoint_set) ... ok
+test_image_similarity_identity (test_split_integrity.TestSplitIntegrity.test_image_similarity_identity) ... ok
+test_locked_test_and_dedup (test_split_integrity.TestSplitIntegrity.test_locked_test_and_dedup) ... ok
+test_near_match_screen_flags_structurally_identical_pair (test_split_integrity.TestSplitIntegrity.test_near_match_screen_flags_structurally_identical_pair) ... ok
+test_series_key_preserves_prefix (test_split_integrity.TestSplitIntegrity.test_series_key_preserves_prefix) ... ok
+test_strong_cross_original_pair_blocks_technical_gate (test_split_integrity.TestSplitIntegrity.test_strong_cross_original_pair_blocks_technical_gate) ... ok
+test_strong_grouping_does_not_cross_fit_val (test_split_integrity.TestSplitIntegrity.test_strong_grouping_does_not_cross_fit_val) ... ok
+test_train_test_duplicate_detected (test_split_integrity.TestSplitIntegrity.test_train_test_duplicate_detected) ... ok
+test_training_gate_never_automatically_approves (test_split_integrity.TestSplitIntegrity.test_training_gate_never_automatically_approves) ... ok
+test_unparsed_token_not_patient (test_split_integrity.TestSplitIntegrity.test_unparsed_token_not_patient) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.691s
+
+OK

@@ -1,0 +1,67 @@
+
+{
+  "version": "pneumolens-split-v2",
+  "project": "PneumoLens",
+  "github_phase": "Phase 4 - Complete bounded similarity screening and split integrity",
+  "scope": "pediatric_binary_normal_vs_pneumonia_research_only",
+  "source": {
+    "expected_counts": {
+      "train/NORMAL": 1349,
+      "train/PNEUMONIA": 3883,
+      "test/NORMAL": 234,
+      "test/PNEUMONIA": 390
+    },
+    "strict_count_verification": true,
+    "original_test_locked": true,
+    "expected_dataset_file_sha256_fingerprint": "a7b36506fbccf5f77b5d80a73b7a53cca8515dba45ae959a8d0a62e5f219a87b",
+    "strict_inventory_fingerprint": true,
+    "reference_fingerprint_method": "SHA256 of sorted (relative_path|raw_file_sha256) lines, as in Phase1 manifest V2"
+  },
+  "grouping": {
+    "rule": "Union of prefixed filename-series CANDIDATES, SHA256 file/decoded exact duplicates, and strong within-original-train perceptual candidates",
+    "patient_ids_verified": false,
+    "numeric_token_alone_is_not_patient_id": true,
+    "train_deduplication": "remove redundant decoded-pixel-exact copies from original train only; maintain all original test rows",
+    "no_automatic_pneumonia_subtype_relabelling": true
+  },
+  "validation": {
+    "method": "StratifiedGroupKFold selected on original train only",
+    "n_splits": 5,
+    "candidate_seeds": [
+      2026,
+      2027,
+      2031
+    ],
+    "target_fraction": 0.2,
+    "max_abs_fraction_deviation": 0.06,
+    "max_abs_positive_rate_deviation": 0.06
+  },
+  "near_duplicate_screen": {
+    "method": "Exhaustive 64bit pHash Hamming screening, then actual 96px image-structure comparison",
+    "max_phash_distance": 6,
+    "chunk_size": 128,
+    "strong_phash_max": 3,
+    "strong_corr_min": 0.995,
+    "strong_gradient_min": 0.975,
+    "strong_mae_max": 0.045,
+    "strong_aspect_max": 0.05,
+    "review_corr_min": 0.975,
+    "review_gradient_min": 0.93,
+    "review_aspect_max": 0.1,
+    "max_private_contact_pairs": 12,
+    "note": "All 0..6 pHash candidates will be compared; HIGH/REVIEW are not confirmed duplicates."
+  },
+  "release": {
+    "automatic_patient_independence_claim": false,
+    "automatic_model_training_approval": false,
+    "research_use_only": true,
+    "requires_human_review_and_documented_risk_acceptance": true
+  },
+  "resume_from_previous_phase4": {
+    "allowed": true,
+    "required_prior_policy_version": "pneumolens-split-v1",
+    "required_prior_inventory_verified": true,
+    "if_unavailable": "full audit from images, with progress reporting",
+    "identity_check": "previous full inventory file SHA matched Phase 1; current paths match; candidate source bytes are reverified before scoring"
+  }
+}
