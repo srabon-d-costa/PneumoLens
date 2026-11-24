@@ -1,0 +1,13 @@
+{
+  "decision": "HOLD",
+  "source_fingerprint": "a7b36506fbccf5f77b5d80a73b7a53cca8515dba45ae959a8d0a62e5f219a87b",
+  "split_fingerprint": "6185405f23d72cecf4dfe63f7ba8002db97a79a39be21f5c3a6ef3d24f4f7a6b",
+  "reviewer": "",
+  "review_date_utc": "",
+  "review_scope": "",
+  "review_evidence_reference": "",
+  "manual_review_completed": false,
+  "patient_independence_unverified_acknowledged": false,
+  "test_set_remains_locked_acknowledged": false,
+  "nonclinical_research_use_acknowledged": false
+}

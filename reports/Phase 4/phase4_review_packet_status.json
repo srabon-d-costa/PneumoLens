@@ -1,0 +1,17 @@
+{
+  "project": "PneumoLens",
+  "phase": "Phase 4B manual review support",
+  "generated_utc": "2026-11-24T13:53:03.342408+00:00",
+  "source_fingerprint": "a7b36506fbccf5f77b5d80a73b7a53cca8515dba45ae959a8d0a62e5f219a87b",
+  "split_fingerprint": "6185405f23d72cecf4dfe63f7ba8002db97a79a39be21f5c3a6ef3d24f4f7a6b",
+  "review_population_pairs": 799,
+  "phash_2_or_4_targeted_pairs": 79,
+  "phash_6_sampled_pairs": 80,
+  "selected_for_manual_review": 159,
+  "manual_decisions_recorded": 0,
+  "manual_review_completed": false,
+  "human_review_status": "PENDING",
+  "research_training_decision": "HOLD_PENDING_HUMAN_REVIEW_AND_RISK_ACCEPTANCE",
+  "patient_independence": "UNVERIFIED",
+  "clinical_deployment_approved": false
+}
